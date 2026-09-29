@@ -31,7 +31,7 @@ class LoginController extends GetxController{
     }
     if (foundUser != null) {
       Get.snackbar("Login", "Welcome ${foundUser.userName}");
-      Get.toNamed('/dashboard');
+      Get.toNamed('/dashboard_screen');
       email.clear();
       password.clear();
     } else {
