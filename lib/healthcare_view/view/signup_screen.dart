@@ -1,4 +1,4 @@
-import 'package:dummy/healthcare_view/signup_controller.dart';
+import 'package:dummy/healthcare_view/view_model/signup_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,7 +1,7 @@
-import 'package:dummy/healthcare_view/user_model.dart';
+import 'package:dummy/healthcare_view/model/user_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'user_list.dart';
+import '../model/user_list.dart';
 
 class LoginController extends GetxController{
   final TextEditingController email = TextEditingController();

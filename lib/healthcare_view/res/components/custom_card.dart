@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomCard extends StatelessWidget {
   final IconData icon;
@@ -41,17 +42,17 @@ class CustomCard extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 55,
-                width: 55,
+                height: 48,
+                width: 48,
                 decoration: BoxDecoration(
                   color: iconBackgroundColor,
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Icon(icon, color: iconColor,),
+                child: Icon(icon, color: iconColor, size: 24,),
               ),
               const SizedBox(height: 5,),
-              Text("$textOne", style: TextStyle(color: textOneColor, fontSize: 14, fontWeight: FontWeight.bold),),
-              Text("$textTwo", style: TextStyle(color: textTwoColor, fontSize: 12),),
+              Text("$textOne", style: GoogleFonts.plusJakartaSans(color: textOneColor, fontSize: 12, fontWeight: FontWeight.w700),),
+              Text("$textTwo", style: GoogleFonts.plusJakartaSans(color: textTwoColor, fontSize: 10, fontWeight: FontWeight.w400),),
             ],
           ),
         ),

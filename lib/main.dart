@@ -1,4 +1,4 @@
-import 'package:dummy/healthcare_view/signup_screen.dart';
+import 'package:dummy/healthcare_view/view/signup_screen.dart';
 import 'package:dummy/view/bank_dashboard.dart';
 import 'package:dummy/view/bank_login.dart';
 import 'package:dummy/view/buttons_practice.dart';
@@ -13,8 +13,8 @@ import 'package:dummy/view/task_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'healthcare_view/dashboard_screen.dart';
-import 'healthcare_view/login_screen.dart';
+import 'healthcare_view/view/dashboard_screen.dart';
+import 'healthcare_view/view/login_screen.dart';
 
 void main(){
   runApp(MyApp());
