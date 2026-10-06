@@ -1,3 +1,4 @@
+import 'package:dummy/healthcare_view/res/components/custom_bottom_bar.dart';
 import 'package:dummy/healthcare_view/res/components/custom_card.dart';
 import 'package:dummy/healthcare_view/view_model/dashboard_controller.dart';
 import 'package:flutter/material.dart';
@@ -5,8 +6,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 
 class HealthCareDashboard extends StatelessWidget {
- const HealthCareDashboard({super.key});
+  HealthCareDashboard({super.key});
 
+  final DashboardController controller  = Get.put(DashboardController());
 
   @override
   Widget build(BuildContext context) {
@@ -239,9 +241,9 @@ class HealthCareDashboard extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(height: 5,),
             Text("Quick Services", style: GoogleFonts.poppins(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w600),),
-            const SizedBox(height: 10,),
+            const SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -319,15 +321,12 @@ class HealthCareDashboard extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home_outlined, color: Color(0xFF2F80ED),), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.person_search_outlined, color: Colors.black54,), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.calendar_month_sharp, color: Colors.black54), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.message_outlined, color: Colors.black54), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.person, color: Colors.black54), label: 'Home'),
-          ]
-      ),
+      bottomNavigationBar: Obx(() => CustomBottomBar(
+        currentIndex: controller.selectedIndex.value,
+        onTap: (index) {
+          controller.changeIndex(index);
+        },
+      )),
     );
   }
 }

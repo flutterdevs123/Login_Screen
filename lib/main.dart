@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/dashboard_screen' : (context) => HealthCareDashboard(),
+        '/dashboard_screen' : (context) =>HealthCareDashboard(),
         // '/' : (context) => HaseebDashboard(),
         // '/' : (context) => ButtonsPractice(),
         // '/' : (context) => SetStatePractice(),
