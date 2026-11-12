@@ -1,14 +1,12 @@
 import 'package:dummy/healthcare_view/res/components/custom_bottom_bar.dart';
 import 'package:dummy/healthcare_view/res/components/custom_card.dart';
-import 'package:dummy/healthcare_view/view_model/dashboard_controller.dart';
+import 'package:dummy/healthcare_view/view_model/bottombar_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 
 class HealthCareDashboard extends StatelessWidget {
   HealthCareDashboard({super.key});
-
-  final DashboardController controller  = Get.put(DashboardController());
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +24,7 @@ class HealthCareDashboard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Good Morning', style: GoogleFonts.inter(color: Color(0xFF414753), fontSize: 12, fontWeight: FontWeight.w500),),
-            Text('Tayyab Khan', style: GoogleFonts.poppins(color: Color(0xFF2F80ED), fontSize: 18,fontWeight: FontWeight.w700),),
+            Text('Tayyab Khan', style: GoogleFonts.poppins(color: Color(0xFF2F80ED), fontSize: 15,fontWeight: FontWeight.w700),),
           ],
         ),
         actions: [
@@ -77,9 +75,9 @@ class HealthCareDashboard extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text("Book today and get", style: GoogleFonts.inter(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),),
-                            Text("free BP screening ", style: GoogleFonts.inter(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),),
-                            Text("at home.", style: GoogleFonts.inter(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),),
+                            Text("Book today and get", style: GoogleFonts.inter(color: Colors.white.withOpacity(0.75), fontSize: 16, fontWeight: FontWeight.w400),),
+                            Text("free BP screening ", style: GoogleFonts.inter(color: Colors.white.withOpacity(0.75), fontSize: 16, fontWeight: FontWeight.w400),),
+                            Text("at home.", style: GoogleFonts.inter(color: Colors.white.withOpacity(0.75), fontSize: 16, fontWeight: FontWeight.w400),),
                           ],
                         ),
                         Container(
@@ -321,12 +319,6 @@ class HealthCareDashboard extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Obx(() => CustomBottomBar(
-        currentIndex: controller.selectedIndex.value,
-        onTap: (index) {
-          controller.changeIndex(index);
-        },
-      )),
     );
   }
 }

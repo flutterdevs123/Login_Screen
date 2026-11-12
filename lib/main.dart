@@ -13,6 +13,7 @@ import 'package:dummy/view/task_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'healthcare_view/view/bottom_bar.dart';
 import 'healthcare_view/view/dashboard_screen.dart';
 import 'healthcare_view/view/login_screen.dart';
 
@@ -42,6 +43,8 @@ class MyApp extends StatelessWidget {
         // '/' : (context) => PracticeStack(),
         '/login' : (context) => HealthCareLogin(),
         '/' : (context) => HealthCareSignup(),
+        '/bottombar' : (context) =>BottomBar(),
+
       },
     );
   }

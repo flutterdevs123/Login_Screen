@@ -1,3 +1,4 @@
+import 'package:dummy/healthcare_view/view_model/get_post.dart';
 import 'package:dummy/healthcare_view/view_model/signup_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -265,6 +266,7 @@ class HealthCareSignup extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 10,),
+
                   Container(
                     height: 50,
                     width: double.infinity,

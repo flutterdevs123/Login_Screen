@@ -1,4 +1,4 @@
-import 'package:dummy/healthcare_view/view_model/dashboard_controller.dart';
+import 'package:dummy/healthcare_view/view_model/bottombar_controller.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,7 +10,6 @@ import '../res/components/custom_doctor_card.dart';
 class HealthCareDoctorsScreen extends StatelessWidget {
   HealthCareDoctorsScreen({super.key});
 
-  final DashboardController controller  = Get.put(DashboardController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -146,12 +145,6 @@ class HealthCareDoctorsScreen extends StatelessWidget {
             ],
           ),
           )),
-      bottomNavigationBar: Obx(() => CustomBottomBar(
-        currentIndex: controller.selectedIndex.value,
-        onTap: (index) {
-          controller.changeIndex(index);
-        },
-      )),
     );
   }
 }
